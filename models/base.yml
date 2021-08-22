@@ -1,0 +1,22 @@
+- name: metadata
+  meta:
+    owner: weijian@domain.com
+    model_maturity: in prod
+  description: >-
+    This table contains information about metadata.
+  columns:
+    - name: id
+      description: User's account ID.
+      tests:
+        - not_null
+        - unique
+    - name: uuid
+      description: UUID of user.
+    - name: state
+      description: Deprecated. Not used anymore.
+    - name: country_iso2
+      description: User's sign up country.
+    - name: enabled
+      description: Boolean that indicates if account is live or disabled.
+    - name: ctime
+      description: Datetime when user created the account in UTC.
